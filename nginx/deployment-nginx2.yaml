@@ -15,9 +15,9 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-          - mountPath: /etc/nginx
+        - mountPath: /etc/nginx
           name: nginx-volume
       volumes:
-        - name: nginx-volume
+      - name: nginx-volume
         hostPath:
           path: /data/nginx
