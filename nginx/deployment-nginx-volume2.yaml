@@ -15,7 +15,7 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-        - mountPath: /mnt/azure
+        - mountPath: /etc/nginx/conf.d
           name: nginx-volume
       volumes:
       - name: nginx-volume
