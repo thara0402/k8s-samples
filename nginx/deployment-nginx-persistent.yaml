@@ -16,7 +16,7 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: azure
-          mountPath: /etc/nginx
+          mountPath: /mnt/azure
       volumes:
       - name: azure
         azureFile:
