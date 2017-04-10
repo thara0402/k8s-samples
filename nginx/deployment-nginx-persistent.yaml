@@ -15,9 +15,11 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-        - mountPath: /etc/nginx/conf.d
-          name: nginx-volume
+        - name: azure
+          mountPath: /etc/nginx/conf.d
       volumes:
-      - name: nginx-volume
-        hostPath:
-          path: /data/nginx
+      - name: azure
+        azureFile:
+          secretName: azure-secret
+          shareName: k8s-volumes
+          readOnly: false
