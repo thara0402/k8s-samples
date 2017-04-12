@@ -14,3 +14,10 @@ spec:
         image: nginx:1.11
         ports:
         - containerPort: 80
+        volumeMounts:
+        - mountPath: /etc/nginx/conf.d
+          name: nginx-volume
+      volumes:
+      - name: nginx-volume
+        hostPath:
+          path: /data/nginx
